@@ -6,11 +6,13 @@ from aiogram import Bot
 from fastapi import FastAPI
 
 from app.api.routes import router
-from app.bot.dispatcher import dispatcher
 from app.config.logging import configure_logging
 from app.config.settings import get_settings
-from app.services.webhook_service import close_bot_session, sync_webhook_on_shutdown
-from app.services.webhook_service import sync_webhook_on_startup
+from app.services.webhook_service import (
+    close_bot_session,
+    sync_webhook_on_shutdown,
+    sync_webhook_on_startup,
+)
 
 logger = logging.getLogger(__name__)
 
